@@ -1,0 +1,287 @@
+ * {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: 'Karla', sans-serif;
+ }
+ 
+.flex {
+ display: -webkit-flex;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+header, section:not(footer section) > div, footer > div {
+ width: 80%;
+ margin: auto;
+}
+
+h1, h2, h3 {
+	font-family: 'DM Serif Display', serif; 
+}
+header {
+ background-color:  hsl(0, 0%, 100%);
+ padding: 15px 0px;
+ align-items: center;
+}
+
+ul {
+	list-style-type: none;
+	align-items: center;
+}
+a {
+	text-decoration: none;
+}
+
+nav li > a {
+	display: inline-block;
+	padding: 5px;
+	margin: 0px 5px;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	color: hsl(273, 4%, 51%);
+}
+
+#hamburger {
+	display: none;
+}
+
+a.btn {
+	border: 2px solid hsl(256, 26%, 20%);
+	padding: 7px 18px;
+	margin-right: 0px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* Intro section  */
+main section.intro {
+	background-color: hsl(256, 26%, 20%);
+	height: 550px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+section.intro > div {
+	color: #fff;
+	padding-top: 80px;
+}
+section.intro > div > * {
+	width: 48%;
+}
+section.intro > div > img {
+	object-fit: cover;
+}
+section.intro hr {
+	width: 100px;
+	margin-bottom: 50px;
+}
+section.intro h1 {
+	font-size: 4rem;
+}
+
+section.intro .btn {
+	color: #fff;
+	border: 1px solid #fff;
+}
+section.intro p {
+	margin: 15px 0px;
+}
+
+section.intro #top-pattern {
+	background: transparent url("images/bg-pattern-intro-right-desktop.svg") no-repeat right;
+	background-size: contain;
+	height: 80%;
+	width: 50%;
+	position: absolute;
+	top:0;
+	right: 0;
+}
+section.intro #bottom-pattern {
+	background: transparent url("images/bg-pattern-intro-left-desktop.svg") no-repeat left;
+	background-size: contain;
+	height: 60%;
+	width: 120px;
+	position: absolute;
+	bottom:-30%;
+	left: 0;
+}
+
+/* Different section  */
+section.different {
+	margin-top: 220px;
+}
+section.different  hr {
+	width: 100px;
+}
+section.different h2 {
+	font-size: 3rem;
+	margin: 25px 0px;
+}
+section.different article {
+	width: 31%;
+	min-width: 250px;
+}
+section.different article > * {
+	margin: 10px 0px;
+}
+section.different article h3 {
+	font-size: 1.5rem;
+}
+
+
+/* Findout section */
+section.findout {
+	margin: 100px 0px;
+}
+section.findout >  div  {
+	background-color: hsl(256, 26%, 20%);
+	padding: 40px;
+	color: #fff;
+	align-items: center;
+	position: relative;
+}
+section.findout h2 {
+	font-size: 2.5rem;
+	/* padding: 100px 0px; */
+}
+section.findout .btn {
+	color: #fff;
+	border-color: #fff;
+	z-index: 2;
+}
+
+section.findout #findout-pattern {
+	background: transparent url("images/bg-pattern-how-we-work-desktop.svg") no-repeat right;
+	background-size: contain;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom:0;
+	right: 0;
+}
+
+/* Footer  */
+footer {
+	background-color: hsl(0,0%, 98%);
+	padding: 40px 0px;
+	position: relative;
+}
+footer section {
+	padding: 20px;
+	text-transform: uppercase;
+}
+footer section p,  footer section li{
+	margin: 15px 0px;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+footer section p {
+	color:hsl(273, 4%, 51%);
+}
+footer section li a{
+	color: hsl(270, 9%, 17%);
+}
+#footer-pattern {
+	background: transparent url("images/bg-pattern-footer-desktop.svg") no-repeat left top;
+	background-size: contain;
+	height: 100%;
+	width: 350px;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+
+@media screen and (max-width: 550px) {
+	header, section:not(footer section) > div, footer > div {
+		width: 85%;
+	}
+	header {
+		padding: 20px 0px;
+	}
+	nav {
+		display: none;
+	}
+	#hamburger {
+		display: inline-block;
+	}
+	main section.intro {
+		height: unset;
+	}
+	section.intro > div.flex {
+		flex-direction: column-reverse;
+		padding-top: 0px;
+		width: 100%;
+	}
+	
+	section.intro > div > * {
+		width: 100%;
+	}
+	section.intro > div.flex hr {
+		display: none;
+	}
+	section.intro > div.flex > div {
+		width: 85%;
+		margin: auto;
+		text-align: center;
+		padding: 50px 0px
+	}
+	
+	section.intro #top-pattern  {
+		background: transparent url("images/bg-pattern-intro-left-mobile.svg") no-repeat left;
+		left: 0px;
+		right: unset;
+		bottom: -100px;
+	}
+	section.intro #bottom-pattern  {
+		background: transparent url("images/bg-pattern-intro-right-mobile.svg") no-repeat right bottom;
+		right: 0px;
+		left: unset;
+		bottom: -100px;
+		top: unset;
+	}
+	
+	
+	section.different {
+		margin-top: 100px;
+		text-align: center;
+	}
+	section.different hr {
+		margin:auto;
+	}
+	section.different article {
+		width: 85%;
+		margin:auto;
+		text-align: center;
+	}
+	
+	section.findout > div.flex {
+		text-align:center;
+		justify-content: center;
+	}
+	section.findout > div.flex .btn {
+		margin: 15px 0px;
+	}
+	section.findout #findout-pattern {
+		background: transparent url("images/bg-pattern-how-we-work-mobile.svg") no-repeat right bottom;
+		right: 0px;
+		
+	}
+	
+	footer div section {
+		width: 100%;
+		display: block;
+		flex-direction: column;
+		text-align: center;
+	}
+	footer section:first-child > * {
+		margin: 10px 0px;
+	}
+	#footer-pattern {
+		background: transparent url("images/bg-pattern-footer-mobile.svg") no-repeat left top;
+		top: 0px;
+		width: 100%
+	}
+}
